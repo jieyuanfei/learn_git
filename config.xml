@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.jyf.frmsi.cn" version="1.00" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>广爱</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <access origin="http://*/*" />
+    <access origin="https://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="resources/icon.png" />
+        <hook src="scripts/add-android-iml.js" type="after_prepare" />
+        <plugin name="cordova-plugin-camera" spec="./plugins2/cordova-plugin-camera" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <splash height="568" src="resources/ios/splash/Default-568h.png" width="320" />
+        <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
+        <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
+        <splash height="1136" src="resources/ios/splash/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1334" src="resources/ios/splash/Default-667h.png" width="750" />
+        <splash height="2208" src="resources/ios/splash/Default-736h.png" width="1242" />
+        <splash height="1242" src="resources/ios/splash/Default-Landscape-736h.png" width="2208" />
+        <icon height="57" src="resources/ios/icon/icon.png" width="57" />
+        <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
+        <icon height="40" src="resources/ios/icon/icon-40.png" width="40" />
+        <icon height="80" src="resources/ios/icon/icon-40@2x.png" width="80" />
+        <icon height="50" src="resources/ios/icon/icon-50.png" width="50" />
+        <icon height="100" src="resources/ios/icon/icon-50@2x.png" width="100" />
+        <icon height="60" src="resources/ios/icon/icon-60.png" width="60" />
+        <icon height="120" src="resources/ios/icon/icon-60@2x.png" width="120" />
+        <icon height="180" src="resources/ios/icon/icon-60@3x.png" width="180" />
+        <icon height="72" src="resources/ios/icon/icon-72.png" width="72" />
+        <icon height="144" src="resources/ios/icon/icon-72@2x.png" width="144" />
+        <icon height="76" src="resources/ios/icon/icon-76.png" width="76" />
+        <icon height="152" src="resources/ios/icon/icon-76@2x.png" width="152" />
+        <icon height="29" src="resources/ios/icon/icon-small.png" width="29" />
+        <icon height="58" src="resources/ios/icon/icon-small@2x.png" width="58" />
+        <icon height="87" src="resources/ios/icon/icon-small@3x.png" width="87" />
+        <icon height="167" src="resources/ios/icon/icon-83.5@2x.png" width="167" />
+        <icon height="1024" src="resources/ios/icon/icon-1024.png" width="1024" />
+        <plugin name="cordova-plugin-camera" spec="~2.1.0" />
+    </platform>
+    <platform name="browser">
+        <preference name="ShowSplashScreen" value="false" />
+    </platform>
+    <splash src="resources/splash.jpg" />
+    <preference name="orientation" value="portrait" />
+    <preference name="WebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="FadeSplashScreenDuration" value="1000" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="ShowSplashScreen" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="LoadUrlTimeoutValue" value="10000" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.1.1" />
+    <plugin name="cordova-plugin-device" spec="~1.0.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="~2.1.0" />
+    <plugin name="cordova-plugin-file" spec="~3.0.0" />
+    <plugin name="cordova-plugin-file-transfer" spec="~1.4.0" />
+    <plugin name="ionic-plugin-keyboard" spec="~1.0.8" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="./plugins2/com.darktalker.cordova.screenshot" />
+    <plugin name="com.synconset.imagepicker" spec="./plugins2/com.synconset.imagepicker" />
+    <plugin name="cordova-plugin-camera" spec="~2.1.1" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="iosPersistentFileLocation" value="Library" />
+    <plugin name="cordova-plugin-camera-preview" spec="~0.9.0" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+        <string>need location access to find things nearby</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+        <string>Please allow application use camera!</string>
+    </edit-config>
+    <hook src="scripts/merge-assets.js" type="after_prepare" />
+    <plugin name="jpush-phonegap-plugin" spec="^3.4.2">
+        <variable name="APP_KEY" value="00d0f24fa436bef9c0386013" />
+    </plugin>
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
+    <engine name="android" spec="~5.1.1" />
+    <engine name="ios" spec="~4.1.1" />
+    <engine name="browser" spec="~4.1.0" />
+</widget>
